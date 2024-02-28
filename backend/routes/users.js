@@ -3,7 +3,7 @@ const router=express.Router()
 const User=require('../models/User')
 const bcrypt=require('bcrypt')
 const Post=require('../models/Post')
-const Comment=require('../models/Comment')
+const Comment=require('../models/comment')
 const verifyToken = require('../verifyToken')
 
 
