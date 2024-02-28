@@ -9,6 +9,7 @@ const jwt=require('jsonwebtoken')
 router.post("/register",async(req,res)=>{
     try{
         const {username,email,password}=req.body
+        console.log(username,email,password,"data...")
         const salt=await bcrypt.genSalt(10)
         const hashedPassword=await bcrypt.hashSync(password,salt)
         const newUser=new User({username,email,password:hashedPassword})
