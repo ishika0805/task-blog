@@ -29,7 +29,7 @@ const connectDB=async()=>{
 dotenv.config()
 app.use(express.json())
 app.use("/images",express.static(path.join(__dirname,"/images")))
-app.use(cors({origin:"https://65def347fa8df4bc81da3bc8--clinquant-seahorse-2edde2.netlify.app/",credentials:true}))
+app.use(cors({origin:"https://65def347fa8df4bc81da3bc8--clinquant-seahorse-2edde2.netlify.app",credentials:true}))
 app.use(cookieParser())
 app.use("/api/auth",authRoute)
 app.use("/api/users",userRoute)
